@@ -91,3 +91,41 @@ listNames.push(name3);
 
 displayNames(listNames);
 
+console.log("\n");
+//another example
+
+function studentGrades(){
+
+    this.grades = [];
+    this.insertGrades = function(grade){
+
+        this.grades.push(grade);
+    };
+
+    this.average = function(){
+
+        var total =0;
+
+        for(var i =0; i< this.grades.length; i++){
+
+            total = total + this.grades[i];
+        }
+
+        var avg = total / this.grades.length;
+
+        return avg;
+    };
+}
+
+var mark = new studentGrades();
+
+mark.insertGrades(90);
+mark.insertGrades(87);
+mark.insertGrades(96);
+
+console.log(mark.grades);
+var result = mark.average();
+console.log("student average: " + result);
+
+
+
