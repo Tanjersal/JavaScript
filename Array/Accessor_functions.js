@@ -4,7 +4,7 @@
 const readline = require('readline');
 const rl = readline.createInterface({input: process.stdin, output: process.stdout});
 
-var names = ['Fabien', 'Jerome', 'Sally', 'Nadia'];
+var names = ['Fabien', 'Jerome', 'Sally', 'Nadia', 'Fabien'];
 
 rl.question("Enter a name to search for: ", function(name){
 
@@ -24,3 +24,11 @@ rl.question("Enter a name to search for: ", function(name){
 
     rl.close();
 })
+
+//using lastindexOf for the last occurence
+
+var test1 = 'Fabien';
+
+var retrieved_pos = names.lastIndexOf(test1);
+
+console.log('Last occurence of ' + test1 + 'is at ' + retrieved_pos);
