@@ -57,6 +57,7 @@ function count(){
     return n;
 }
 
+
 function clear(){
 
     for(item in this.arr){
@@ -71,9 +72,11 @@ var telephone = new dictionary();
 
 console.log('Dictionary is below: ')
 telephone.insert('Bourdin', 224);
-telephone.insert('Jerome', 216);
-telephone.insert('Koli', 33);
+telephone.insert('Koli', 216);
+telephone.insert('Jerome', 33);
 telephone.display();
+
+console.log('\n');
 
 console.log('Find Bourdin: ' + telephone.find('Bourdin'));
 
@@ -83,4 +86,5 @@ console.log('Number of element: ' + telephone.count());
 telephone.clear();
 
 telephone.display();
+
 
